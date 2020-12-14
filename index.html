@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<meta name="google-site-verification" content="WD2XQF2B-Z5u9sdfitwiWHg5_x1apYCrLXOkPgwlQY8" />
+<html lang="en">
+<title>Amal Dev Parakkat</title>
+<meta charset="UTF-8">
+
+<link rel = "icon" href ="tud.png" type = "image/x-icon"> 
+ <meta name="description" content="Computer Graphics, Sketch based modeling">
+  <meta name="keywords" content="Sketch based modeling, Computer Graphics, Sketch processing, Reconstruction, Animation, sketch to 3D modeling">
+  <meta name="author" content="Amal Dev Parakkat">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+
+
+.box {
+
+  position: auto;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #ffffff;
+ margin-left: 200px auto;
+  padding: 20px 20px;
+    border-radius: 15px 15px 15px 15px;
+
+        margin: 0 auto; /* Added */
+        float: none; 
+ margin-left: 170px auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+position: center;
+ max-width: calc(70% - 3.5em);
+min-width: 500px;
+margin-right: auto; 
+margin-top: 75px; 
+margin-bottom: 75px; 
+word-wrap: break-word; 
+border-spacing: 15px;
+}
+.box abox {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+}
+
+.box abox:hover {
+  color: #ffffff;
+}
+
+
+.news {
+
+  position: auto;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #ffffff;
+ margin-left: 200px auto;
+  padding: 20px 20px;
+    border-radius: 15px 15px 15px 15px;
+
+        margin: 0 auto; /* Added */
+        float: none; 
+ margin-left: 170px auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+position: center;
+ max-width: calc(70% - 3.5em);
+min-width: 450px;
+margin-right: auto; 
+margin-top: 75px; 
+margin-bottom: 55px; 
+word-wrap: break-word; 
+border-spacing: 15px;
+}
+.news abox {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+}
+
+.news abox:hover {
+  color: #ffffff;
+}
+
+
+
+
+div.d {
+  text-align: justify;
+} 
+div.h2 {
+color: #1E90FF;
+} 
+
+
+.list-type1{
+width:400px;
+margin:0 auto;
+}
+
+.list-type1 ol{
+counter-reset: li;
+list-style: none;
+*list-style: decimal;
+font-size: 15px;
+font-family: 'Raleway', sans-serif;
+padding: 0;
+margin-bottom: 4em;
+}
+.list-type1 ol ol{
+margin: 0 0 0 2em;
+}
+
+.list-type1 a{
+position: relative;
+display: block;
+padding: .4em .4em .4em 2em;
+*padding: .4em;
+margin: .5em 0;
+background: #1E90FF;
+color: #000;
+text-decoration: none;
+-moz-border-radius: .3em;
+-webkit-border-radius: .3em;
+border-radius: 10em;
+transition: all .2s ease-in-out;
+}
+
+.list-type1 a:hover{
+background: #d6d4d4;
+text-decoration:none;
+transform: scale(1.1);
+}
+
+
+
+
+
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding"  style="z-index:3;width:200px;height:600px;font-weight:bold;border-radius:15px 15px 15px 15px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Close</a>
+  <div class="w3-container">
+    <h5 class="w3-padding-64" style="align:center"><b><img hspace="16" src="tudblack.png" alt="Pineapple" style="width:100px;" align="center"></b></h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Home</a> 
+    <a href="publications.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Publications</a> 
+    <a href="services.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Services</a> 
+    <a href="codes.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Codes</a> 
+    <a href="misc.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Misc</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
+  <span><img src="tud.png" alt="Pineapple" style="width:50px;" align="center"></span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+
+
+
+
+  <div class="box" class="round_left">
+<table id=#myTable style="width:100%" align="center">
+  <tr>
+    <td><p><img src="photo.jpg" alt="Pineapple" style="width:170px;" align="center"></td>
+    <td><div class="h2"><h2>Dr. Amal Dev Parakkat</h2></div>
+<div>Research Associate</div>
+<div>Computer Graphics and Visualization</div>
+<div>TU Delft , EEMCS - Dept. Intelligent Systems</div>
+<br>
+<div class="abox">adp.upasana [AT] gmail [DOT] com</div>
+<div class="abox">A.D.Parakkat [AT] tudelft [DOT] nl</div>
+<br>
+</td>
+  </tr>
+</table>
+<div class="d">
+<div class="h2"><h3>Short bio</h3></div>
+I was born in Kerala, India. I am currently working as a Research Associate in the <a href="https://graphics.tudelft.nl/" target="_blank">Computer Graphics and Visualization Group</a> at <a href="https://www.tudelft.nl/en/" target="_blank">TU Delft</a>. Previously, I was an Assistant Professor of <a href="https://www.iitg.ac.in/" target="_blank">Computer Science</a> at the Indian Institute of Technology Guwahati (<a href="https://www.iitg.ac.in/" target="_blank">IIT Guwahati</a>), India (2020) and a Postdoctoral Researcher (2019) in the <a href="https://www.lix.polytechnique.fr/geovic/index.html" target="_blank">GeoVic</a> (formerly STREAM) team of LIX, <a href="https://www.polytechnique.edu/en" target="_blank">Ecole Polytechnique</a>, Paris, working with <a href="https://www.lix.polytechnique.fr/geovic/members/marie-paule_cani/index.html" target="_blank">Marie-Paule Cani</a> . Before that, I was a Ph.D. student and then an Institute Pre-Doctoral Fellow in the <a href="https://ed.iitm.ac.in/~raman/agcl/agcl.html" target="_blank">Advanced Geometric Computing Lab</a> (AGCL) at the <a href="www.iitm.ac.in" target="_blank">Indian Institute of Technology Madras</a>, India, working with <a href="https://ed.iitm.ac.in/~raman/" target="_blank">Ramanathan Muthuganapathy</a>. During my Ph.D, I visited University of Tokyo and worked with <a href="https://www-ui.is.s.u-tokyo.ac.jp/~takeo/" target="_blank">Takeo Igarashi</a>.
+<br><br>
+I am interested in the practical algorithms for digital content creation tasks with the main focus on Sketch-based interfaces. I also work on fundamental problems in digital geometry processing, including reconstruction and meshing.
+<br><br>
+
+</div>
+
+<!--<div class="h2"><h3>Awards and Honors</h3></div>
+<ol>
+<li>"Institut Carnot Grant" for postdoctoral research in Ecole Polytechnique</li>
+<li>Institute Research Award 2018 - IIT Madras</li>
+<li>The honorable mention award - Shape Modeling International 2018</li>
+<li>Reproducibility stamp award - SMI 2018, SMI 2017, SGP 2016</li>
+<li>First rank for M.Tech (Computer Science) from MG University</li>
+<li>First class with honors for B.Tech (Computer Science) from Calicut University</li>
+</ol>
+
+<!--
+
+ #// <div class="news" class="round_left">
+//<div class="h2"><h3>Recent News</h3></div>
+//<div class="list-type1">
+//<ol>
+//<li><a href="https://smi2020.sciencesconf.org/" target="_blank">Jan 2020: I will be serving in the Program Committee of SMI 2020</a></li>
+//<li><a href="http://www.cgs-network.org/cgi20/" target="_blank">Jan 2020: I will be serving in the Program Committee of CGI 2020</a></li>
+//</ol>
+//</div>
+//</div>-->
+
+
+<!-- W3.CSS Container -->
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
+
