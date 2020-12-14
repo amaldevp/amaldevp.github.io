@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Amal Dev Parakkat</title>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="WD2XQF2B-Z5u9sdfitwiWHg5_x1apYCrLXOkPgwlQY8" />
+<link rel = "icon" href ="tud.png" type = "image/x-icon"> 
+ <meta name="description" content="Computer Graphics, Sketch based modeling">
+  <meta name="keywords" content="Sketch based modeling, Computer Graphics, Sketch processing, Reconstruction, Animation, sketch to 3D modeling">
+  <meta name="author" content="Amal Dev Parakkat">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+
+
+.fimage {
+
+  position: auto;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #ffffff;
+ margin-left: 200px auto;
+  padding: 20px 20px;
+    border-radius: 15px 15px 15px 15px;
+
+        margin: 0 auto; /* Added */
+        float: none; 
+ margin-left: 170px auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+position: center;
+
+width: 200px;
+height: 200px;
+margin-right: auto; 
+word-wrap: break-word; 
+border-spacing: 15px;
+}
+.fimage abox {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+}
+
+.fimage abox:hover {
+  color: #ffffff;
+}
+.box {
+
+  position: auto;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #ffffff;
+ margin-left: 200px auto;
+  padding: 20px 20px;
+    border-radius: 15px 15px 15px 15px;
+
+        margin: 0 auto; /* Added */
+        float: none; 
+ margin-left: 170px auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+position: center;
+ max-width: calc(100% - 3.5em);
+min-width: 500px;
+margin-right: auto; 
+margin-top: 5px; 
+
+word-wrap: break-word; 
+border-spacing: 15px;
+}
+.box abox {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+}
+
+.box abox:hover {
+  color: #ffffff;
+}
+
+.image {
+
+  position: auto;
+  z-index: 1;
+
+  background: #ffffff;
+
+
+    border-radius: 15px 15px 15px 15px;
+
+        margin: 0 auto; /* Added */
+        float: none; 
+ margin-left: auto;
+  margin-right: auto;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+position: center;
+
+width: 200px;
+height: 200px;
+margin-right: auto; 
+word-wrap: break-word; 
+
+}
+.image abox {
+
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+}
+
+.image abox:hover {
+  color: #ffffff;
+}
+
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+}
+
+div.d {
+  text-align: justify;
+} 
+div.h2 {
+color: #1E90FF;
+} 
+
+
+.list-type1{
+width:400px;
+margin:0 auto;
+}
+
+.list-type1 ol{
+counter-reset: li;
+list-style: none;
+*list-style: decimal;
+font-size: 15px;
+font-family: 'Raleway', sans-serif;
+padding: 0;
+margin-bottom: 4em;
+}
+.list-type1 ol ol{
+margin: 0 0 0 2em;
+}
+
+.list-type1 a{
+position: relative;
+display: block;
+padding: .4em .4em .4em 2em;
+*padding: .4em;
+margin: .5em 0;
+background: #1E90FF;
+color: #000;
+text-decoration: none;
+-moz-border-radius: .3em;
+-webkit-border-radius: .3em;
+border-radius: 10em;
+transition: all .2s ease-in-out;
+}
+
+.list-type1 a:hover{
+background: #d6d4d4;
+text-decoration:none;
+transform: scale(1.1);
+}
+
+
+
+
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding"  style="z-index:3;width:200px;height:600px;font-weight:bold;border-radius:15px 15px 15px 15px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Close</a>
+  <div class="w3-container">
+    <h5 class="w3-padding-64" style="align:center"><b><img hspace="16" src="tudblack.png" alt="Pineapple" style="width:100px;" align="center"></b></h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Home</a> 
+    <a href="publications.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Publications</a> 
+    <a href="services.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Services</a> 
+    <a href="codes.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Codes</a> 
+    <a href="misc.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="z-index:3;width:auto;height:auto;font-weight:bold;border-radius:15px 15px 15px 15px;">Misc</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
+  <span><img src="iitg.png" alt="Pineapple" style="width:50px;" align="center"></span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="fimage" class="round_left">
+<p><img src="Thumbnails/vico2020.png" alt="Pineapple" style="width:170px;padding-top: 10px;" align="left" hspace="30">
+</div>
+</td>
+ <td>
+ </td>
+    <td><div class="abox"><a href="https://doi.org/10.1186/s42492-020-00049-7" target="_blank"><h3>A digital assistant for shading paper sketches</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Springer Visual Computing for Industry, Biomedicine, and Art - 2020</div><div class="a">AUTHORS: <b>Amal Dev Parakkat</b>, Harihara Gowtham, Sarang Anil Joshi,  <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/VICO2020.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>&ensp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/amaldevp/DelaunayInflation" target="_blank">Delaunay Inflation code for 2D to 3D</a>
+</td>
+  </tr>
+</table>
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img src="Thumbnails/cagd2020.png" alt="Pineapple" style="width:170px;padding-top: 50px;" align="center" hspace="20">
+</div>
+</td>
+ <td>
+ </td>
+    <td><div class="abox"><a href="https://doi.org/10.1016/j.cagd.2020.101879" target="_blank"><h3>An Input-independent single pass algorithm for reconstruction from dot patterns and boundary samples</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Elsevier Computer Aided Geometric Design - 2020</div><div class="a">AUTHORS: Safeer Babu Thayyil, <b>Amal Dev Parakkat</b>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/CAGD2020.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img src="Thumbnails/euro2020.png" alt="Pineapple" style="width:170px;padding-top: 50px;" align="center" hspace="20">
+</div>
+</td>
+ <td>
+ </td>
+    <td><div class="abox"><a href="https://doi.org/10.2312/egs.20201024" target="_blank"><h3>Interactive Flat Coloring of Minimalist Neat Sketches</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: EUROGRAPHICS 2020 (Short Paper proceedings)</div><div class="a">AUTHORS: <b>Amal Dev Parakkat</b>, Prudhviraj Madipally, Harihara Gowtham, <a href="https://www.lix.polytechnique.fr/geovic/members/marie-paule_cani/index.html" target="_blank">Marie-Paule Cani</a></div><br>
+<a href="PDF/EG2020.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>&ensp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=H284amm0ZZE&t=1s" target="_blank"><i class='fas fa-film' style='font-size:25px;color:red'></i></a>
+</td>
+  </tr>
+</table>
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img src="Thumbnails/SIG2019.png" alt="Pineapple" style="width:170px;padding-top: 50px;" align="center" hspace="20">
+</div>
+</td>
+ <td>
+ </td>
+    <td><div class="abox"><a href="https://doi.org/10.1145/3306214.3338598" target="_blank"><h3>Layered Reconstruction of Stippling Art</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: SIGGRAPH 2019 (Poster Proceedings)</div><div class="a">AUTHORS: <b>Amal Dev Parakkat</b>, <a href="http://www.lix.polytechnique.fr/~memari/" target="_blank">Pooran Memari</a>, <a href="https://www.lix.polytechnique.fr/geovic/members/marie-paule_cani/index.html" target="_blank">Marie-Paule Cani</a></div><br>
+<a href="PDF/SIG19p.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img src="Thumbnails/IGS2019.png" alt="Pineapple" style="width:170px;padding-top: 50px;" align="center">
+</div>
+</td>
+ <td>
+</td>
+    <td><div class="abox"><a href="https://hal.archives-ouvertes.fr/hal-02124981" target="_blank"><h3>CT-shape: Coordinated triangle based reconstruction from dot patterns and boundary samples</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: International Geometry Summit 2019 (Poster Proceedings)</div><div class="a">AUTHORS: Safeer Babu Thayyil, <b>Amal Dev Parakkat</b>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/igs19.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="50px" src="Thumbnails/CAG19.png" alt="Pineapple" style="width:170px;padding-top: 20px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="https://doi.org/10.1016/j.cag.2019.04.006" target="_blank"><h3>Automatic structuring of organic shapes from a single drawing</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Elsevier Computers & Graphics (Special Issue) - 2019</div><div class="a">AUTHORS: Even Entem, <b>Amal Dev Parakkat</b>, <a href="https://www.irit.fr/~Loic.Barthe/" target="_blank">Loic Barthe</a>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a>, <a href="https://www.lix.polytechnique.fr/geovic/members/marie-paule_cani/index.html" target="_blank">Marie-Paule Cani</a></div><br>
+<a href="PDF/cag19.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a> &ensp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://youtu.be/UN_dgRiPSMk" target="_blank"><i class='fas fa-film' style='font-size:25px;color:red'></i></a>
+</td>
+  </tr>
+</table>
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="50px" src="Thumbnails/CGF18.png" alt="Pineapple" style="width:170px;padding-top: 20px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.13589" target="_blank"><h3>Incremental Labeling of Voronoi Vertices for Shape Reconstruction</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Computer Graphics Forum 2019</div><div class="a">AUTHORS: <a href="http://cs.smu.ca/~jiju/" target="_blank">Jiju Peethambaran</a>, <b>Amal Dev Parakkat</b>, Andrea Tagliasacchi, Ruisheng Wang, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/cgf19.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a> &ensp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/jijup/VoronoiCurve" target="_blank"><i class="fa fa-file-text" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="50px" src="Thumbnails/EXP18.png" alt="Pineapple" style="width:160px;padding-top: 20px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="https://doi.org/10.1145/3229147.3229155" target="_blank"><h3>Structuring and Layering Contour Drawings of Organic Shapes</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Expressive 2018</div><div class="a">AUTHORS: Even Entem, <b>Amal Dev Parakkat</b>, <a href="https://www.lix.polytechnique.fr/geovic/members/marie-paule_cani/index.html" target="_blank">Marie-Paule Cani</a>, <a href="https://www.irit.fr/~Loic.Barthe/" target="_blank">Loic Barthe</a></div><br>
+<a href="PDF/exp18.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="50px" src="Thumbnails/SMI18.png" alt="Pineapple" style="width:110px;padding-top: 0px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="https://www.sciencedirect.com/science/article/pii/S0097849318300761" target="_blank"><h3>A Delaunay triangulation based approach for cleaning rough sketches</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Elsevier Computers & Graphics (Special Issue of SMI 2018) </div><div class="a">AUTHORS: <b>Amal Dev Parakkat</b>, Uday Bondi Pundarikaksha, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div>
+<div class="a">HONORABLE MENTION AWARD</div><br>
+<a href="PDF/smi18rough.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a> &ensp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://youtu.be/kGekj-JXzqk" target="_blank"><i class='fas fa-film' style='font-size:25px;color:red'></i></a> &ensp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/amaldevp/RoughSketchSimplification" target="_blank"><i class="fa fa-file-text" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="50px" src="Thumbnails/SMI182.png" alt="Pineapple" style="width:160px;padding-top: 20px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="https://www.sciencedirect.com/science/article/pii/S0097849318300803" target="_blank"><h3>Peeling the Longest: A Simple Generalized Curve Reconstruction Algorithm</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Elsevier Computers & Graphics (Special Issue of SMI 2018) </div><div class="a">AUTHORS: <b>Amal Dev Parakkat</b>, <a href="http://people.cse.nitc.ac.in/subha/" target="_blank">Subhasree Methirumangalath</a>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/smi18peel.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a> &ensp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/amaldevp/Peeling_the_Longest" target="_blank"><i class="fa fa-file-text" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="50px" src="Thumbnails/SIGA17.png" alt="Pineapple" style="width:180px;padding-top: 30px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="https://dl.acm.org/citation.cfm?id=3149447&CFID=1016477293&CFTOKEN=13788881" target="_blank"><h3>A Reconstruction using a simple triangle removal approach</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: SIGGRAPH Asia 2017 (Technical Brief) </div><div class="a">AUTHORS: <a href="http://people.cse.nitc.ac.in/subha/" target="_blank">Subhasree Methirumangalath</a>, Shyam Sundar Kannan, <b>Amal Dev Parakkat</b>,  <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/SIGA17TB.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="50px" src="Thumbnails/EXP17.png" alt="Pineapple" style="width:180px;padding-top: 30px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="http://diglib.eg.org/handle/10.2312/npar2017a16" target="_blank"><h3>Sketch and Shade: An interactive assistant for sketching and shading</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Expressive 2017 (Short Paper) </div><div class="a">AUTHORS: <b>Amal Dev Parakkat</b>, Sarang Anil Joshi, Uday Bondi Pundarikaksha, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/Exp17.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="50px" src="Thumbnails/SMI17.png" alt="Pineapple" style="width:180px;padding-top: 30px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="http://www.sciencedirect.com/science/article/pii/S0097849317300559" target="_blank"><h3>
+Hole detection in a planar point set: An empty disk approach</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Elsevier Computers & Graphics (Special Issue of SMI 2017) </div><div class="a">AUTHORS:<a href="http://people.cse.nitc.ac.in/subha/" target="_blank">Subhasree Methirumangalath</a>, Shyam Sundar Kannan, <b>Amal Dev Parakkat</b>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><div class="a">REPRODUCIBILITY STAMP AWARD</div><br>
+<a href="PDF/smi17.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a> &ensp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/ShyamsTree/HoleDetection" target="_blank"><i class="fa fa-file-text" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="55px" src="Thumbnails/SGP16.png" alt="Pineapple" style="width:180px;padding-top: 50px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="https://diglib.eg.org/handle/10.1111/cgf12974" target="_blank"><h3>
+Crawl through Neighbors: A Simple Curve Reconstruction Algorithm</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Computer Graphics Forum (Special Issue of SGP 2016) </div><div class="a">AUTHORS: <b>Amal Dev Parakkat</b>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><div class="a">REPRODUCIBILITY STAMP AWARD</div><br>
+<a href="PDF/sgp16.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a> &ensp; &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/amaldevp/Crawl_through_Neighbors" target="_blank"><i class="fa fa-file-text" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="55px" src="Thumbnails/JEA16.png" alt="Pineapple" style="width:180px;padding-top: 35px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="http://dl.acm.org/citation.cfm?id=2896849" target="_blank"><h3>
+An Empirical Study on Randomized Optimal Area Polygonization of Planar Point Sets</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: ACM Journal of Experimental Algorithms 2016 </div><div class="a">AUTHORS: <a href="http://cs.smu.ca/~jiju/" target="_blank">Jiju Peethambaran</a>, <b>Amal Dev Parakkat</b>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/jea15.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="55px" src="Thumbnails/PG15.png" alt="Pineapple" style="width:180px;padding-top: 0px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="https://diglib.eg.org/handle/10.2312/pg20151285" target="_blank"><h3>
+A Voronoi based Labeling Approach to Curve Reconstruction and Medial Axis Approximation</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Pacific Graphics 2015 (Short Paper) </div><div class="a">AUTHORS: <a href="http://cs.smu.ca/~jiju/" target="_blank">Jiju Peethambaran</a>, <b>Amal Dev Parakkat</b>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/pg15.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="55px" src="Thumbnails/SMI15.png" alt="Pineapple" style="width:180px;padding-top: 10px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="http://www.sciencedirect.com/science/article/pii/S0097849315000722" target="_blank"><h3>
+A Unified Approach Towards Reconstruction of a Planar Point Set</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Elsevier Computers & Graphics (Special Issue of SMI 2015) </div><div class="a">AUTHORS: <a href="http://people.cse.nitc.ac.in/subha/" target="_blank">Subhasree Methirumangalath</a>, <b>Amal Dev Parakkat</b>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/smi15.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="55px" src="Thumbnails/JCISE15.png" alt="Pineapple" style="width:200px;padding-top: 30px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="https://computingengineering.asmedigitalcollection.asme.org/article.aspx?articleID=2090324" target="_blank"><h3>
+A Randomized Approach to Volume Constrained Polyhedronization Problem</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: ASME Journal of Computing and Information Science in Engineering 2015 </div><div class="a">AUTHORS: <a href="http://cs.smu.ca/~jiju/" target="_blank">Jiju Peethambaran</a>, <b>Amal Dev Parakkat</b>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/jcise15.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="55px" src="Thumbnails/CAD14.png" alt="Pineapple" style="width:200px;padding-top: 30px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="http://www.tandfonline.com/doi/abs/10.1080/16864360.2014.997636?journalCode=tcad20#.VsStQvl97IU" target="_blank"><h3>
+A Graph based Geometric Approach to Contour Extraction from Noisy Binary Images</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Computer Aided Design & Application 2015 (Special Issue of International Conference on CAD and Applications) </div><div class="a">AUTHORS: <b>Amal Dev Parakkat</b>, <a href="http://cs.smu.ca/~jiju/" target="_blank">Jiju Peethambaran</a>, Philumon Joseph, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/cada15.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+<table id=#myTable style="width:100%" align="center">
+<col width="100px">
+<col width="10px">
+  <col width="0">
+  <tr>
+    <td>
+  <div class="image" class="round_left">
+<p><img hspace="55px" src="Thumbnails/SGP13.png" alt="Pineapple" style="width:200px;padding-top: 30px;padding-left: 1px;">
+</div>
+ <td>
+</td>
+</td>
+    <td><div class="abox"><a href="" target="_blank"><h3>
+Volume Constrained Polyhedronizations of Point Sets in 3-Space</h3></a></div>
+
+<div class="a"></div><div class="a">PUBLICATION: Eurographics Symposium on Geometry Processing 2013 (Poster Proceedings) </div><div class="a">AUTHORS: ﻿<a href="http://cs.smu.ca/~jiju/" target="_blank">Jiju Peethambaran</a>, <b>Amal Dev Parakkat</b>, <a href="https://ed.iitm.ac.in/~raman" target="_blank">Ramanathan Muthuganapathy</a></div><br>
+<a href="PDF/sgp13p.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="font-size:25px;color:red"></i></a>
+</td>
+  </tr>
+</table>
+
+
+<!-- W3.CSS Container -->
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
+
